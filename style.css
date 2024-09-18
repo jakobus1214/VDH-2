@@ -76,10 +76,6 @@ section img {
     margin-bottom: 20px;
 }
 
-section#projekte ul {
-    padding-left: 20px;
-}
-
 footer {
     background-color: #4FA5A3;
     color: white;
@@ -92,6 +88,34 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Schreibanimation für den Titel */
+.animated-title {
+    font-size: 2.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    width: 0;
+    animation: typing 4s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: white;
+    }
+    to {
+        border-color: transparent;
+    }
 }
 
 /* Animation Styles */
@@ -148,5 +172,8 @@ footer p {
 }
 
 .hover-container:hover .hover-text {
+    opacity: 1;
+}
+
     opacity: 1;
 }
